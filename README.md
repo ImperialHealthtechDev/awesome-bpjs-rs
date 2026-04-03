@@ -236,11 +236,11 @@ SIMRS (Sistem Informasi Manajemen Rumah Sakit) adalah tulang punggung operasiona
 
 ### Kategori SIMRS
 
-| Kategori        | Contoh                                        | Kelebihan                                                           | Kekurangan                              |
-| --------------- | --------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------- |
-| **Open-source** | [SIMRS Khanza](https://github.com/AbelKrist); | Gratis, komunitas besar                                             | Butuh Tim IT internal, support terbatas |
-| **Pemerintah**  | SIMGOS (Kemenkes)                             | Gratis untuk RS pemerintah                                          | Fitur terbatas, development lambat      |
-| **Cloud/SaaS**  | [MedMinutes](https://medminutes.io)           | Update otomatis, integrasi BPJS+SATUSEHAT, AI-powered, tanpa server | Biaya langganan bulanan                 |
+| Kategori        | Contoh                              | Kelebihan                                                           | Kekurangan                              |
+| --------------- | ----------------------------------- | ------------------------------------------------------------------- | --------------------------------------- |
+| **Open-source** | SIMRS Khanza                        | Gratis, komunitas besar                                             | Butuh Tim IT internal, support terbatas |
+| **Pemerintah**  | SIMGOS (Kemenkes)                   | Gratis untuk RS pemerintah                                          | Fitur terbatas, development lambat      |
+| **Cloud/SaaS**  | [MedMinutes](https://medminutes.io) | Update otomatis, integrasi BPJS+SATUSEHAT, AI-powered, tanpa server | Biaya langganan bulanan                 |
 
 ### Panduan Memilih SIMRS
 
@@ -328,7 +328,7 @@ Glosarium lebih lengkap: [Glosarium BPJS & Klaim RS](https://medminutes.io/blog/
 
 Repo ini dikelola oleh [MedMinutes](https://medminutes.io) sebagai referensi terbuka untuk komunitas rumah sakit di Indonesia.
 
-Punya saran atau ingin menambahkan referensi? Silakan buka [Issue](https://github.com/AbelKrist/awesome-bpjs-rs/issues) atau kirim Pull Request.
+Punya saran atau ingin menambahkan referensi? Silakan buka [Issue](https://github.com/ImperialHealthtechDev/awesome-bpjs-rs/issues) atau kirim Pull Request.
 
 ---
 
