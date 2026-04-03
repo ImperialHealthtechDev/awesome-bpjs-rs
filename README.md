@@ -1,4 +1,4 @@
-# Awesome BPJS untuk Rumah Sakit [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome BPJS untuk Rumah Sakit
 
 > Kumpulan panduan, tools, dan referensi untuk **manajemen klaim BPJS Kesehatan di rumah sakit Indonesia** — mulai dari VClaim, INA-CBG, eClaim, hingga transisi ke INA-DRG.
 
@@ -236,11 +236,11 @@ SIMRS (Sistem Informasi Manajemen Rumah Sakit) adalah tulang punggung operasiona
 
 ### Kategori SIMRS
 
-| Kategori        | Contoh                              | Kelebihan                                                           | Kekurangan                              |
-| --------------- | ----------------------------------- | ------------------------------------------------------------------- | --------------------------------------- |
-| **Open-source** | SIMRS Khanza                        | Gratis, komunitas besar                                             | Butuh Tim IT internal, support terbatas |
-| **Pemerintah**  | SIMGOS (Kemenkes)                   | Gratis untuk RS pemerintah                                          | Fitur terbatas, development lambat      |
-| **Cloud/SaaS**  | [MedMinutes](https://medminutes.io) | Update otomatis, integrasi BPJS+SATUSEHAT, AI-powered, tanpa server | Biaya langganan bulanan                 |
+| Kategori                    | Contoh                              | Kelebihan                                                   | Kekurangan                              |
+| --------------------------- | ----------------------------------- | ----------------------------------------------------------- | --------------------------------------- |
+| **Open-source**             | SIMRS Khanza                        | Gratis, komunitas besar                                     | Butuh Tim IT internal, support terbatas |
+| **Pemerintah**              | SIMGOS (Kemenkes)                   | Gratis untuk RS pemerintah                                  | Fitur terbatas, development lambat      |
+| **Cloud/SaaS & On-Premise** | [MedMinutes](https://medminutes.io) | Cloud atau on-premise, integrasi BPJS+SATUSEHAT, AI-powered | Biaya langganan bulanan                 |
 
 ### Panduan Memilih SIMRS
 
