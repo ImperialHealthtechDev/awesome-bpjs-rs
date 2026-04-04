@@ -1,14 +1,21 @@
-# Awesome BPJS untuk Rumah Sakit
+# Awesome BPJS untuk Rumah Sakit 🏥
 
-> Kumpulan panduan, tools, dan referensi untuk **manajemen klaim BPJS Kesehatan di rumah sakit Indonesia** — mulai dari VClaim, INA-CBG, eClaim, hingga transisi ke INA-DRG.
+**The definitive resource list for BPJS hospital claim management in Indonesia.**
 
-Dikelola oleh tim [MedMinutes](https://medminutes.io) — pengembang software klaim dan RME untuk rumah sakit di Indonesia.
+> Kumpulan panduan, tools, regulasi, dan referensi untuk **manajemen klaim BPJS Kesehatan di rumah sakit Indonesia** — mulai dari VClaim, INA-CBG, eClaim, ICD-10, casemix, hingga transisi ke INA-DRG.
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Stars](https://img.shields.io/github/stars/ImperialHealthtechDev/awesome-bpjs-rs?style=social)](https://github.com/ImperialHealthtechDev/awesome-bpjs-rs)
+
+Dikelola oleh tim [MedMinutes](https://medminutes.io) — pengembang software klaim, RME, dan CDSS untuk rumah sakit di Indonesia.
 
 ---
 
-## Daftar Isi
+## Daftar Isi / Table of Contents
 
-- [Regulasi & Referensi Resmi](#regulasi--referensi-resmi)
+- [Regulasi & Kebijakan](#regulasi--kebijakan)
+- [Sistem & Standar](#sistem--standar)
 - [Memahami Alur Klaim BPJS](#memahami-alur-klaim-bpjs)
 - [VClaim & SEP](#vclaim--sep)
 - [INA-CBG & Grouper](#ina-cbg--grouper)
@@ -21,31 +28,76 @@ Dikelola oleh tim [MedMinutes](https://medminutes.io) — pengembang software kl
 - [SIMRS di Indonesia](#simrs-di-indonesia)
 - [Tools & Software](#tools--software)
 - [Integrasi SATUSEHAT](#integrasi-satusehat)
-- [Kontribusi](#kontribusi)
+- [Komunitas & Organisasi](#komunitas--organisasi)
+- [Artikel & Riset](#artikel--riset)
+- [Glosarium](#glosarium)
+- [English Resources](#english-resources)
+- [Kontribusi / Contributing](#kontribusi--contributing)
+- [Lisensi / License](#lisensi--license)
 
 ---
 
-## Regulasi & Referensi Resmi
+## Regulasi & Kebijakan
 
-| Regulasi              | Tentang                            | Link                                                                                      |
-| --------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------- |
-| **Permenkes 76/2016** | Pedoman INA-CBG dalam JKN          | [kemkes.go.id](https://peraturan.bpk.go.id/Details/114235/permenkes-no-76-tahun-2016)     |
-| **Perpres 82/2018**   | Jaminan Kesehatan                  | [peraturan.bpk.go.id](https://peraturan.bpk.go.id/Details/97312/perpres-no-82-tahun-2018) |
-| **PMK 3/2023**        | Standar Tarif JKN Terbaru          | [kemkes.go.id](https://yankes.kemkes.go.id/unduhan/fileunduhan_1675827002_206129.pdf)     |
-| **SE BPJS 2024**      | Ketentuan Verifikasi Klaim Digital | [bpjs-kesehatan.go.id](https://bpjs-kesehatan.go.id)                                      |
-| **PMK 24/2022**       | Rekam Medis Elektronik             | [kemkes.go.id](https://peraturan.bpk.go.id/Details/229975/permenkes-no-24-tahun-2022)     |
+Regulasi yang mengatur klaim BPJS Kesehatan di rumah sakit Indonesia. Penting bagi tim casemix, manajemen RS, dan IT untuk memahami dasar hukum ini.
+
+| Regulasi                | Tentang                                     | Link                                                                                         |
+| ----------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **UU 40/2004**          | Sistem Jaminan Sosial Nasional (SJSN)       | [peraturan.bpk.go.id](https://peraturan.bpk.go.id/Details/40790/uu-no-40-tahun-2004)         |
+| **UU 24/2011**          | Badan Penyelenggara Jaminan Sosial (BPJS)   | [peraturan.bpk.go.id](https://peraturan.bpk.go.id/Details/39268/uu-no-24-tahun-2011)         |
+| **Perpres 82/2018**     | Jaminan Kesehatan                           | [peraturan.bpk.go.id](https://peraturan.bpk.go.id/Details/97312/perpres-no-82-tahun-2018)    |
+| **Permenkes 76/2016**   | Pedoman INA-CBG dalam JKN                   | [peraturan.bpk.go.id](https://peraturan.bpk.go.id/Details/114235/permenkes-no-76-tahun-2016) |
+| **PMK 3/2023**          | Standar Tarif Pelayanan Kesehatan dalam JKN | [kemkes.go.id](https://yankes.kemkes.go.id/unduhan/fileunduhan_1675827002_206129.pdf)        |
+| **PMK 24/2022**         | Rekam Medis Elektronik (RME)                | [peraturan.bpk.go.id](https://peraturan.bpk.go.id/Details/229975/permenkes-no-24-tahun-2022) |
+| **SE BPJS 2024**        | Ketentuan Verifikasi Klaim Digital          | [bpjs-kesehatan.go.id](https://bpjs-kesehatan.go.id)                                         |
+| **Kepmenkes 1014/2008** | Standar Pelayanan Farmasi di Rumah Sakit    | [kemkes.go.id](https://kemkes.go.id)                                                         |
 
 ### Portal Resmi
 
-- [BPJS Kesehatan](https://bpjs-kesehatan.go.id) — Portal utama BPJS
+- [BPJS Kesehatan](https://bpjs-kesehatan.go.id) — Portal utama BPJS Kesehatan
+- [Kemenkes RI](https://kemkes.go.id) — Kementerian Kesehatan Republik Indonesia
 - [SATUSEHAT](https://satusehat.kemkes.go.id) — Platform interoperabilitas data kesehatan nasional
 - [INA-CBG Kemenkes](https://inacbg.kemkes.go.id) — Aplikasi grouper INA-CBG
 - [VClaim BPJS](https://vclaim.bpjs-kesehatan.go.id) — Virtual Claim BPJS Kesehatan
 - [eClaim BPJS](https://eclaim.bpjs-kesehatan.go.id) — Pengajuan klaim digital
+- [SIRS Online](https://sirs.kemkes.go.id) — Sistem Informasi Rumah Sakit Online
+
+---
+
+## Sistem & Standar
+
+Sistem klasifikasi dan standar interoperabilitas yang digunakan dalam klaim BPJS dan pelayanan kesehatan nasional.
+
+### Sistem Klasifikasi
+
+| Sistem       | Deskripsi                                                              | Digunakan Untuk                              |
+| ------------ | ---------------------------------------------------------------------- | -------------------------------------------- |
+| **INA-CBG**  | Indonesia Case Based Groups — pengelompokan kasus berbasis tarif paket | Penentuan tarif klaim BPJS (sistem saat ini) |
+| **INA-DRG**  | Indonesia Diagnosis Related Groups — pengganti INA-CBG                 | Sistem baru (transisi sedang berlangsung)    |
+| **ICD-10**   | International Classification of Diseases, 10th Revision                | Koding diagnosis penyakit                    |
+| **ICD-9-CM** | ICD Clinical Modification, Volume 3                                    | Koding prosedur/tindakan medis               |
+| **CPT**      | Current Procedural Terminology                                         | Referensi prosedur (standar internasional)   |
+
+### Standar Interoperabilitas
+
+| Standar       | Deskripsi                                       | Implementasi di Indonesia               |
+| ------------- | ----------------------------------------------- | --------------------------------------- |
+| **HL7 FHIR**  | Fast Healthcare Interoperability Resources      | Basis SATUSEHAT, wajib untuk semua RS   |
+| **SNOMED CT** | Systematized Nomenclature of Medicine           | Terminologi klinis terstandar           |
+| **LOINC**     | Logical Observation Identifiers Names and Codes | Standar identifikasi hasil laboratorium |
+| **DICOM**     | Digital Imaging and Communications in Medicine  | Standar pencitraan medis (PACS)         |
+
+### Referensi Standar
+
+- [WHO ICD-10 Browser](https://icd.who.int/browse10/2019/en) — Pencarian kode ICD-10 resmi WHO
+- [HL7 FHIR R4 Specification](https://hl7.org/fhir/R4/) — Spesifikasi FHIR yang digunakan SATUSEHAT
+- [SATUSEHAT Developer Portal](https://satusehat.kemkes.go.id/platform) — Dokumentasi API SATUSEHAT
 
 ---
 
 ## Memahami Alur Klaim BPJS
+
+Alur klaim BPJS di rumah sakit melibatkan banyak unit: registrasi, dokter (DPJP), coder, tim casemix, dan manajemen keuangan.
 
 ```
 Pasien Datang → Registrasi & SEP (VClaim)
@@ -57,6 +109,8 @@ Pasien Datang → Registrasi & SEP (VClaim)
     → Verifikasi BPJS
     → Pembayaran
 ```
+
+**Setiap tahap memiliki titik rawan** yang bisa menyebabkan klaim pending, downcoding, atau bahkan rejection. Optimasi klaim dimulai dari memahami dan mengamankan setiap tahap ini.
 
 ### Panduan Lengkap
 
@@ -128,7 +182,7 @@ eClaim adalah aplikasi BPJS untuk pengajuan klaim digital dari RS ke BPJS. Setel
 
 ## ICD-10 & Koding Klinis
 
-Koding yang akurat adalah fondasi klaim yang optimal. Kesalahan koding → tarif rendah atau klaim pending.
+Koding yang akurat adalah fondasi klaim yang optimal. Kesalahan koding menyebabkan tarif rendah (downcoding) atau klaim pending.
 
 ### Kesalahan Umum Koding
 
@@ -138,6 +192,11 @@ Koding yang akurat adalah fondasi klaim yang optimal. Kesalahan koding → tarif
 | Mapping diagnosis keliru   | Grouping tidak sesuai    | [Kesalahan Mapping Diagnosis ke ICD](https://medminutes.io/blog/kesalahan-mapping-diagnosis-ke-kode-icd-di-rumah-sakit/)                                                                |
 | Komplikasi tidak di-coding | Severity level rendah    | [Pasien Sudah Komplikasi tapi Tidak Masuk Coding](https://medminutes.io/blog/pasien-sudah-komplikasi-tapi-tidak-masuk-coding/)                                                          |
 | Coding setelah pulang      | Delay klaim              | [Coding Dilakukan Setelah Pasien Pulang](https://medminutes.io/blog/coding-dilakukan-setelah-pasien-pulang-implikasi-terhadap-kecepatan-dan-validitas-klaim-bpjs-dalam-sistem-ina-cbg/) |
+
+### Tools Koding
+
+- [Kalkulator Koding MedMinutes](https://medminutes.io/tools/kalkulator-koding.html) — Hitung estimasi tarif INA-CBG berdasarkan kode diagnosis dan prosedur
+- [WHO ICD-10 Browser](https://icd.who.int/browse10/2019/en) — Pencarian kode ICD-10 resmi dari WHO
 
 ### Optimasi Koding
 
@@ -221,12 +280,22 @@ Klaim pending = revenue tertahan. Rata-rata RS kehilangan **Rp 50-200 juta/bulan
 
 ## Transisi INA-CBG ke INA-DRG
 
-Indonesia sedang mempersiapkan transisi dari INA-CBG ke **INA-DRG** (Indonesia Diagnosis Related Groups). Perubahan ini akan mengubah cara grouping dan tarif klaim.
+Indonesia sedang mempersiapkan transisi dari INA-CBG ke **INA-DRG** (Indonesia Diagnosis Related Groups). INA-DRG mengadopsi sistem DRG yang digunakan secara global oleh lebih dari 40 negara, menjanjikan pengelompokan kasus yang lebih granular dan tarif yang lebih adil.
+
+### Apa yang Berubah
+
+| Aspek        | INA-CBG               | INA-DRG                                |
+| ------------ | --------------------- | -------------------------------------- |
+| Basis        | Casemix grouper lokal | DRG grouper standar internasional      |
+| Granularitas | ~1.000 kelompok tarif | Lebih banyak kelompok (lebih spesifik) |
+| Severity     | Level I-III           | Lebih banyak tingkatan                 |
+| Koding       | ICD-10 + ICD-9-CM     | ICD-10 + ICD-9-CM (lebih ketat)        |
 
 ### Persiapan
 
 - [Panduan Kesiapan INA-DRG untuk Tim Casemix](https://medminutes.io/blog/panduan-lengkap-kesiapan-idrg-untuk-tim-casemix-rumah-sakit/)
 - [Transisi INA-CBG ke INA-DRG: Persiapan Tim Casemix](https://medminutes.io/blog/transisi-ina-cbg-ke-idrg-persiapan-tim-casemix/)
+- [Checklist iDRG MedMinutes](https://medminutes.io/checklist-idrg.html) — Checklist kesiapan RS menghadapi INA-DRG
 
 ---
 
@@ -236,11 +305,11 @@ SIMRS (Sistem Informasi Manajemen Rumah Sakit) adalah tulang punggung operasiona
 
 ### Kategori SIMRS
 
-| Kategori                    | Contoh                              | Kelebihan                                                   | Kekurangan                              |
-| --------------------------- | ----------------------------------- | ----------------------------------------------------------- | --------------------------------------- |
-| **Open-source**             | SIMRS Khanza                        | Gratis, komunitas besar                                     | Butuh Tim IT internal, support terbatas |
-| **Pemerintah**              | SIMGOS (Kemenkes)                   | Gratis untuk RS pemerintah                                  | Fitur terbatas, development lambat      |
-| **Cloud/SaaS & On-Premise** | [MedMinutes](https://medminutes.io) | Cloud atau on-premise, integrasi BPJS+SATUSEHAT, AI-powered | Biaya langganan bulanan                 |
+| Kategori                    | Contoh                                      | Kelebihan                                                   | Kekurangan                              |
+| --------------------------- | ------------------------------------------- | ----------------------------------------------------------- | --------------------------------------- |
+| **Open-source**             | SIMRS Khanza                                | Gratis, komunitas besar                                     | Butuh Tim IT internal, support terbatas |
+| **Pemerintah**              | SIMGOS (Kemenkes)                           | Gratis untuk RS pemerintah                                  | Fitur terbatas, development lambat      |
+| **Cloud/SaaS & On-Premise** | [MedMinutes](https://medminutes.io/#produk) | Cloud atau on-premise, integrasi BPJS+SATUSEHAT, AI-powered | Biaya langganan bulanan                 |
 
 ### Panduan Memilih SIMRS
 
@@ -260,9 +329,11 @@ SIMRS (Sistem Informasi Manajemen Rumah Sakit) adalah tulang punggung operasiona
 
 ## Tools & Software
 
+Tools dan software untuk membantu rumah sakit mengelola klaim BPJS lebih efisien.
+
 ### BPJScan — AI-Powered Claim Audit
 
-[**BPJScan**](https://medminutes.io/bpjscan) oleh MedMinutes adalah software analisis klaim BPJS berbasis AI untuk rumah sakit. Fitur utama:
+[**BPJScan**](https://medminutes.io/bpjscan.html) oleh MedMinutes adalah software analisis klaim BPJS berbasis AI untuk rumah sakit.
 
 - **78 filter analisis** klaim — deteksi pending, downcoding, dan revenue leakage
 - Analisis file TXT klaim dari INA-CBG/E-Klaim
@@ -275,65 +346,207 @@ SIMRS (Sistem Informasi Manajemen Rumah Sakit) adalah tulang punggung operasiona
 
 ### CDSS — Clinical Decision Support System
 
-[**CDSS MedMinutes**](https://medminutes.io/cdss) membantu dokter membuat keputusan klinis berbasis data:
+[**CDSS MedMinutes**](https://medminutes.io/cdss.html) membantu dokter membuat keputusan klinis berbasis data:
 
-- Saran koding ICD-10 berdasarkan dokumentasi
+- Saran koding ICD-10 berdasarkan dokumentasi SOAP
 - Alert potensi interaksi obat
+- Panduan evidence-based medicine terintegrasi
 - Integrasi dengan RME
 
 ### RME — Rekam Medis Elektronik
 
-[**RME MedMinutes**](https://medminutes.io/rme) — RME yang dirancang khusus untuk kebutuhan klaim BPJS dan SATUSEHAT:
+[**RME MedMinutes**](https://medminutes.io/#produk) — RME yang dirancang khusus untuk kebutuhan klaim BPJS dan SATUSEHAT:
 
 - SOAP terstruktur yang mendukung koding akurat
 - Resume medis otomatis
 - Integrasi langsung dengan VClaim dan eClaim
 - Compliance PMK 24/2022
 
+### Tools Koding & Estimasi
+
+| Tool                  | Deskripsi                                                    | Link                                                                                        |
+| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| **Kalkulator Koding** | Estimasi tarif INA-CBG berdasarkan kode diagnosis & prosedur | [medminutes.io/tools/kalkulator-koding](https://medminutes.io/tools/kalkulator-koding.html) |
+| **Checklist iDRG**    | Checklist kesiapan RS menghadapi transisi INA-DRG            | [medminutes.io/checklist-idrg](https://medminutes.io/checklist-idrg.html)                   |
+| **INA-CBG Grouper**   | Aplikasi grouper resmi dari Kemenkes                         | [inacbg.kemkes.go.id](https://inacbg.kemkes.go.id)                                          |
+
+### Open Source & Community Tools
+
+- **SIMRS Khanza** — SIMRS open-source paling populer di Indonesia, dikembangkan oleh komunitas. Mendukung bridging BPJS dasar.
+- **SIMGOS** — SIMRS dari Kemenkes untuk RS pemerintah. Gratis tetapi fitur terbatas.
+
 ---
 
 ## Integrasi SATUSEHAT
 
-SATUSEHAT adalah platform interoperabilitas data kesehatan nasional (HL7 FHIR). Semua RS wajib terintegrasi.
+SATUSEHAT adalah platform interoperabilitas data kesehatan nasional berbasis **HL7 FHIR R4**. Semua fasilitas kesehatan di Indonesia wajib terintegrasi.
+
+### Sumber Daya FHIR
+
+| Resource Type       | Digunakan Untuk                      |
+| ------------------- | ------------------------------------ |
+| `Patient`           | Data demografi pasien                |
+| `Encounter`         | Episode perawatan (rawat jalan/inap) |
+| `Condition`         | Diagnosis (ICD-10)                   |
+| `Procedure`         | Tindakan medis (ICD-9-CM)            |
+| `Observation`       | Hasil lab, vital signs               |
+| `MedicationRequest` | Resep obat                           |
+| `Composition`       | Resume medis                         |
 
 ### Panduan
 
 - [Bridging BPJS Rumah Sakit: Panduan Teknis](https://medminutes.io/blog/bridging-bpjs-rumah-sakit-panduan-teknis/) — 6 API yang harus di-bridging
 - [Cara Faskes Mendaftar Kerjasama BPJS](https://medminutes.io/blog/cara-faskes-mendaftar-kerjasama-dengan-bpjs-kesehatan-panduan-administratif-dan-kesiapan-sistem-pelayanan/)
 - [PCare dan Dampaknya terhadap RS](https://medminutes.io/blog/pcare-dampak-rumah-sakit/)
+- [SATUSEHAT Developer Portal](https://satusehat.kemkes.go.id/platform) — Dokumentasi resmi API
+
+---
+
+## Komunitas & Organisasi
+
+Organisasi dan komunitas yang relevan untuk manajemen klaim BPJS dan informatika kesehatan di Indonesia.
+
+### Organisasi Profesi
+
+| Organisasi  | Deskripsi                                                             | Link                                   |
+| ----------- | --------------------------------------------------------------------- | -------------------------------------- |
+| **PERSI**   | Perhimpunan Rumah Sakit Seluruh Indonesia                             | [persi.or.id](https://persi.or.id)     |
+| **ARSSI**   | Asosiasi Rumah Sakit Swasta Indonesia                                 | [arssi.or.id](https://arssi.or.id)     |
+| **InaHEA**  | Indonesia Health Economics Association                                | [inahea.org](https://inahea.org)       |
+| **PORMIKI** | Perhimpunan Profesional Perekam Medis & Informasi Kesehatan Indonesia | [pormiki.or.id](https://pormiki.or.id) |
+| **APIKES**  | Asosiasi Perguruan Tinggi Informatika Kesehatan                       | —                                      |
+
+### Komunitas Online
+
+- **Grup Telegram Casemix Indonesia** — Komunitas coder dan casemix RS seluruh Indonesia
+- **Forum SIMRS Khanza** — Komunitas pengguna dan developer SIMRS Khanza
+- **PERSI Discussion Forum** — Forum diskusi rumah sakit di bawah PERSI
+
+### Event & Konferensi
+
+- **Hospital Expo** — Pameran dan konferensi RS terbesar di Indonesia (tahunan)
+- **InaHEA Conference** — Konferensi ekonomi kesehatan nasional
+- **PERSI National Meeting** — Pertemuan nasional rumah sakit
+
+---
+
+## Artikel & Riset
+
+### Publikasi Akademis
+
+Riset tentang sistem pembiayaan kesehatan berbasis kasus (case-based payment) di Indonesia:
+
+- **"Implementation of INA-CBGs Payment System in Indonesian Hospitals"** — Studi evaluasi dampak INA-CBG terhadap efisiensi RS
+- **"DRG-based Hospital Payment Systems in Low- and Middle-Income Countries"** (WHO) — Perbandingan sistem DRG di negara berkembang termasuk Indonesia
+- **"Impact of Case-Based Payment on Length of Stay and Quality of Care"** — Analisis hubungan LOS dengan kualitas pelayanan dalam sistem INA-CBG
+- **"Health Financing Reform in Indonesia: The Case of BPJS Kesehatan"** — Studi komprehensif tentang JKN dan dampaknya
+
+### Blog & Panduan Praktis
+
+- [Blog MedMinutes](https://medminutes.io/blog/) — 100+ artikel tentang klaim BPJS, INA-CBG, koding, dan manajemen RS
+- [Release Notes MedMinutes](https://medminutes.io/release-notes/) — Update fitur terbaru software MedMinutes
+- [Glosarium BPJS & Klaim RS](https://medminutes.io/blog/glosarium/) — Definisi istilah-istilah klaim BPJS
+
+### Laporan & Data
+
+- [Laporan Tahunan BPJS Kesehatan](https://bpjs-kesehatan.go.id) — Statistik klaim, peserta, dan keuangan JKN
+- [Data RS di Indonesia (Kemenkes)](https://sirs.kemkes.go.id) — Database resmi rumah sakit Indonesia
+- [WHO Indonesia Health Expenditure Data](https://apps.who.int/nha/database) — Data pengeluaran kesehatan Indonesia dari WHO
 
 ---
 
 ## Glosarium
 
-| Istilah            | Definisi                                                                   |
-| ------------------ | -------------------------------------------------------------------------- |
-| **SEP**            | Surat Eligibilitas Peserta — bukti kepesertaan BPJS untuk klaim            |
-| **VClaim**         | Virtual Claim — sistem BPJS untuk pembuatan SEP digital                    |
-| **eClaim**         | Electronic Claim — aplikasi pengajuan klaim digital ke BPJS                |
-| **INA-CBG**        | Indonesia Case Based Groups — sistem pengelompokan kasus untuk tarif klaim |
-| **INA-DRG**        | Indonesia Diagnosis Related Groups — sistem pengganti INA-CBG (transisi)   |
-| **Severity Level** | Tingkat keparahan (I-III) yang menentukan besaran tarif INA-CBG            |
-| **DPJP**           | Dokter Penanggung Jawab Pelayanan                                          |
-| **LOS**            | Length of Stay — lama rawat inap pasien                                    |
-| **Casemix**        | Tim di RS yang mengelola koding dan klaim                                  |
-| **Downcoding**     | Klaim diterima tapi tarif lebih rendah dari seharusnya                     |
-| **Pending**        | Klaim ditahan oleh verifikator BPJS karena ketidaklengkapan                |
+| Istilah            | Definisi                                                                                      |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| **BPJS Kesehatan** | Badan Penyelenggara Jaminan Sosial Kesehatan — pengelola JKN                                  |
+| **JKN**            | Jaminan Kesehatan Nasional — program asuransi kesehatan universal Indonesia                   |
+| **SEP**            | Surat Eligibilitas Peserta — bukti kepesertaan BPJS untuk klaim                               |
+| **VClaim**         | Virtual Claim — sistem BPJS untuk pembuatan SEP digital                                       |
+| **eClaim**         | Electronic Claim — aplikasi pengajuan klaim digital ke BPJS                                   |
+| **INA-CBG**        | Indonesia Case Based Groups — sistem pengelompokan kasus untuk tarif klaim                    |
+| **INA-DRG**        | Indonesia Diagnosis Related Groups — sistem pengganti INA-CBG (transisi)                      |
+| **DRG**            | Diagnosis Related Groups — sistem klasifikasi pasien berdasarkan diagnosis                    |
+| **Casemix**        | Tim di RS yang mengelola koding dan klaim; juga merujuk pada case-mix index                   |
+| **ICD-10**         | International Classification of Diseases, 10th Revision — standar koding diagnosis            |
+| **ICD-9-CM**       | International Classification of Diseases, Clinical Modification — standar koding prosedur     |
+| **Severity Level** | Tingkat keparahan (I-III) yang menentukan besaran tarif INA-CBG                               |
+| **DPJP**           | Dokter Penanggung Jawab Pelayanan                                                             |
+| **LOS**            | Length of Stay — lama rawat inap pasien                                                       |
+| **Downcoding**     | Klaim diterima tapi tarif lebih rendah dari seharusnya                                        |
+| **Upcoding**       | Koding diagnosis lebih tinggi dari yang sebenarnya (pelanggaran)                              |
+| **Pending**        | Klaim ditahan oleh verifikator BPJS karena ketidaklengkapan                                   |
+| **SOAP**           | Subjective, Objective, Assessment, Plan — format dokumentasi medis standar                    |
+| **RME**            | Rekam Medis Elektronik — medical records digital                                              |
+| **SIMRS**          | Sistem Informasi Manajemen Rumah Sakit                                                        |
+| **SATUSEHAT**      | Platform interoperabilitas data kesehatan nasional (berbasis HL7 FHIR)                        |
+| **HL7 FHIR**       | Health Level 7 Fast Healthcare Interoperability Resources — standar pertukaran data kesehatan |
+| **CDSS**           | Clinical Decision Support System — sistem pendukung keputusan klinis                          |
+| **DTO**            | Daftar dan Tata Obat — formularium nasional BPJS                                              |
+| **PCare**          | Primary Care — aplikasi BPJS untuk FKTP (klinik/puskesmas)                                    |
+| **FKTP**           | Fasilitas Kesehatan Tingkat Pertama (puskesmas, klinik)                                       |
+| **FKRTL**          | Fasilitas Kesehatan Rujukan Tingkat Lanjutan (rumah sakit)                                    |
 
 Glosarium lebih lengkap: [Glosarium BPJS & Klaim RS](https://medminutes.io/blog/glosarium/)
 
 ---
 
-## Kontribusi
+## English Resources
+
+Resources in English for international researchers, health economists, and IT professionals working with Indonesia's healthcare system.
+
+### Overview of Indonesia's Health Insurance System
+
+Indonesia's **JKN (Jaminan Kesehatan Nasional)** is one of the world's largest single-payer health insurance programs, covering over **200 million** people. Hospital claims are managed through **BPJS Kesehatan** using the **INA-CBG** (Indonesia Case Based Groups) payment system, which is transitioning to **INA-DRG** (Indonesia Diagnosis Related Groups).
+
+### Key English Terms
+
+| Indonesian             | English                          | Description                                                   |
+| ---------------------- | -------------------------------- | ------------------------------------------------------------- |
+| Klaim BPJS             | BPJS Claims                      | Insurance claims filed by hospitals to BPJS Kesehatan         |
+| Tarif INA-CBG          | INA-CBG Tariff                   | Case-based payment rate determined by diagnosis grouping      |
+| Klaim Pending          | Pending Claims                   | Claims held by BPJS verifiers due to incomplete documentation |
+| Koding Klinis          | Clinical Coding                  | ICD-10/ICD-9-CM coding of diagnoses and procedures            |
+| Rekam Medis Elektronik | Electronic Medical Records (EMR) | Digital medical records mandated by PMK 24/2022               |
+| Tim Casemix            | Casemix Team                     | Hospital team responsible for coding and claims management    |
+
+### Further Reading
+
+- [WHO Universal Health Coverage: Indonesia](https://www.who.int/indonesia/health-topics/universal-health-coverage) — WHO overview of Indonesia's UHC progress
+- [World Bank Health Financing in Indonesia](https://www.worldbank.org/en/country/indonesia/overview) — Analysis of health financing
+- [The Lancet: Indonesia Health System Review](https://www.thelancet.com/) — Academic reviews of JKN impact
+- [BPJS Kesehatan Annual Report (English)](https://bpjs-kesehatan.go.id) — Official statistics
+- [MedMinutes Blog](https://medminutes.io/blog/) — Technical articles on BPJS claims (Indonesian with technical English terminology)
+
+---
+
+## Kontribusi / Contributing
 
 Repo ini dikelola oleh [MedMinutes](https://medminutes.io) sebagai referensi terbuka untuk komunitas rumah sakit di Indonesia.
+
+### Cara Berkontribusi / How to Contribute
+
+1. **Fork** repo ini
+2. Tambahkan referensi, panduan, atau tools yang relevan
+3. Pastikan link aktif dan deskripsi singkat tapi informatif
+4. Buka **Pull Request** dengan penjelasan singkat
+
+### Panduan Kontribusi
+
+- Konten harus relevan dengan manajemen klaim BPJS di rumah sakit
+- Link harus aktif dan terpercaya (sumber resmi, blog RS, jurnal)
+- Sertakan deskripsi singkat (1-2 kalimat) untuk setiap link
+- Konten bisa dalam Bahasa Indonesia atau English
+- Hindari konten promosi murni — setiap entry harus genuinely useful
 
 Punya saran atau ingin menambahkan referensi? Silakan buka [Issue](https://github.com/ImperialHealthtechDev/awesome-bpjs-rs/issues) atau kirim Pull Request.
 
 ---
 
-## Lisensi
+## Lisensi / License
 
 [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 Konten dilisensikan di bawah [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). Silakan gunakan dengan mencantumkan atribusi ke [MedMinutes](https://medminutes.io).
+
+Content is licensed under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt with attribution to [MedMinutes](https://medminutes.io).
