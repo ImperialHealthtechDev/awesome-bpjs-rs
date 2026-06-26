@@ -339,7 +339,7 @@ Tools dan software untuk membantu rumah sakit mengelola klaim BPJS lebih efisien
 - Analisis file TXT klaim dari INA-CBG/E-Klaim
 - Identifikasi klaim berpotensi pending **sebelum** submit
 - Dashboard monitoring klaim real-time
-- Digunakan oleh **50+ rumah sakit** di Indonesia
+- Digunakan oleh **60+ rumah sakit** di Indonesia
 - Proses analisis **< 24 jam** untuk seluruh data klaim
 
 > Artikel terkait: [BPJScan vs Audit Manual Klaim BPJS](https://medminutes.io/blog/bpjscan-vs-audit-manual-klaim-bpjs/)
