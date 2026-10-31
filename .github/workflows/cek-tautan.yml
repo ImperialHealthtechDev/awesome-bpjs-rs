@@ -1,0 +1,35 @@
+name: Cek tautan
+
+on:
+  pull_request:
+  schedule:
+    - cron: "0 1 * * 1" # Senin 08:00 WIB
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Periksa tautan README
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress --timeout 30 --max-retries 2
+            --accept 200,203,206,429
+            --exclude "kemkes\.go\.id" --exclude "bpjs-kesehatan\.go\.id"
+            --exclude "persi\.or\.id" --exclude "pormiki\.or\.id" --exclude "inahea\.org"
+            README.md CONTRIBUTING.md
+          fail: ${{ github.event_name == 'pull_request' }}
+      - name: Buka isu bila ada tautan rusak (jadwal mingguan)
+        if: github.event_name == 'schedule' && steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "[Koreksi] Tautan rusak terdeteksi"
+          content-filepath: ./lychee/out.md
+          labels: koreksi, good first issue

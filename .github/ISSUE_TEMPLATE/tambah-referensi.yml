@@ -1,0 +1,46 @@
+name: Usulkan referensi
+description: Usulkan regulasi, panduan, jurnal, atau alat untuk ditambahkan ke daftar.
+title: "[Referensi] "
+labels: ["usulan"]
+body:
+  - type: input
+    id: tautan
+    attributes:
+      label: Tautan
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: bagian
+    attributes:
+      label: Bagian
+      options:
+        - Pembaruan Regulasi 2026
+        - Regulasi & Kebijakan
+        - VClaim & SEP
+        - INA-CBG & Grouper
+        - Transisi INA-CBG ke iDRG
+        - ICD-10 & Koding Klinis
+        - Dokumentasi Medis & Resume
+        - Integrasi SATUSEHAT
+        - Artikel & Riset
+        - Glosarium
+        - Lainnya
+    validations:
+      required: true
+  - type: textarea
+    id: alasan
+    attributes:
+      label: Kenapa berguna untuk tim klaim RS?
+      description: Satu atau dua kalimat.
+    validations:
+      required: true
+  - type: checkboxes
+    id: cek
+    attributes:
+      label: Daftar periksa
+      options:
+        - label: Sumbernya bisa diperiksa (resmi, jurnal, atau penulis jelas).
+          required: true
+        - label: Tidak memuat data pasien atau data klaim nyata.
+          required: true

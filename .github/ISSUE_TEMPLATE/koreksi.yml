@@ -1,0 +1,18 @@
+name: Laporkan tautan rusak atau info usang
+description: Tautan mati, regulasi sudah diganti, atau ada informasi yang keliru.
+title: "[Koreksi] "
+labels: ["koreksi"]
+body:
+  - type: input
+    id: lokasi
+    attributes:
+      label: Bagian atau entri yang perlu diperbaiki
+    validations:
+      required: true
+  - type: textarea
+    id: koreksi
+    attributes:
+      label: Yang benar
+      description: Sertakan tautan sumber bila ada.
+    validations:
+      required: true
